@@ -1,9 +1,10 @@
 #! /bin/sh
 
-for fileName in `ls -a`; do
+for fileName in *; do
   #newFileName=`echo $fileName | sed -e 's/[0-9]*[0-9]\.\ //' -e 's/\ \-\ \[MusicJagat\.\Com\]//'`;
   #newFileName=`echo $fileName | sed -e 's/\ \@\ Fmw11\.com//'`;
   #newFileName=`echo $fileName | sed -e 's/[0-9]*[0-9]\ \-\ CE\ \-\ //' -e 's/\ \[DJMaza\]//'`;
-  newFileName=`echo $fileName | sed -e 's/\(Bengalimp3\.IN\)//'`;
+  #newFileName=`echo $fileName | sed -e 's/\(Bengalimp3\.IN\)//'`;
+  newFileName=`echo $fileName | sed -e 's/[0-9]*[0-9]\ \-\ //' -e 's/\ \-\ DownloadMing\.SE//'`;
   mv "$fileName" "$newFileName";
 done;
